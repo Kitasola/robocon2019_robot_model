@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="config" default="default.rviz" />
+  <arg name="model" default="$(find robot_model)/robot.urdf" />
+  <arg name="gui" default="True" />
+	<param name="robot_description" textfile="$(arg model)" />
+	<param name="use_gui" value="$(arg gui)"/>
+
+  <node name="robot_model_field" pkg="robot_model" type="robot_model_field" />
+  <node name="robot_model_controller" pkg="robot_model" type="robot_model_controller" />
+  <node name="robot_model_status" pkg="robot_model" type="robot_model_status" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_model)/$(arg config)" required="true" />
+</launch>

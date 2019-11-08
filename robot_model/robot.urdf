@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot name="robot">
+  <link name="world"/>
+
+  <joint name="joint_world_AR" type="fixed">
+    <parent link="world"/>
+    <child link="body_link"/>
+  </joint>
+
+  <link name="body_link">
+    <visual>
+      <geometry>
+        <box size="0.8 0.8 0.8"/>
+      </geometry>
+      <origin xyz="5.4 1.8 0.4" rpy="0 0 0"/>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 0.5"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- <joint name="joint_world_MR" type="fixed"> -->
+  <!--   <parent link="world"/> -->
+  <!--   <child link="body_link"/> -->
+  <!-- </joint> -->
+
+  <!-- <link name="body_link"> -->
+  <!--   <visual> -->
+  <!--     <geometry> -->
+  <!--       <box size="0.8 0.8 0.8"/> -->
+  <!--     </geometry> -->
+  <!--     <origin xyz="1.1 0.6 0.4" rpy="0 0 0"/> -->
+  <!--     <material name="black"> -->
+  <!--       <color rgba="0.0 0.0 0.0 0.5"/> -->
+  <!--     </material> -->
+  <!--   </visual> -->
+  <!-- </link> -->
+
+</robot>
